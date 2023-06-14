@@ -20,7 +20,7 @@ requirements:
     - python >=3.6
   run:
     - numpy
-    - pandas
+    - pandas <2
     - python >=3.6
     - scikit-learn
     - scipy
