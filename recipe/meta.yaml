@@ -1,5 +1,5 @@
 {% set name = "ml-wrappers" %}
-{% set version = "0.4.13" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ml_wrappers-{{ version }}.tar.gz
-  sha256: b513b281197a30702f087210b2b977a2c226a15dbcef5590383f4e8ffd02b945
+  sha256: 0d19aa87bba30879fb011496b9dd3bfd8bdcf6bb18f42e58d7cee62bf14116c1
 
 build:
   noarch: python
