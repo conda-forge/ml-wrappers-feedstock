@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ml_wrappers-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ml_wrappers-{{ version }}.tar.gz
   sha256: c5013a576fe065a2f91e33f38de25f59f227f3fba6d55cc2d34d1ac7e404a1d2
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - numpy
     - pandas <2
-    - python >=3.6
+    - python >={{ python_min }}
     - scikit-learn
     - scipy
 
@@ -32,6 +32,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/microsoft/ml-wrappers
