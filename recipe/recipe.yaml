@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: ml-wrappers
-  version: "0.6.2"
+  version: "0.6.3"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/ml_wrappers-${{ version }}.tar.gz
-  sha256: 9efe7c725a6112b78906ad4ec8af60cab3f7d35fa8cfa2f20d391a943b6151d2
+  sha256: 4d20f01356255a52a065c47691ee7bf87df982176a78e61e14b775fe7d527e46
 
 build:
   number: 0
